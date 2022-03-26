@@ -1,0 +1,26 @@
+Create a LocalScript in StarterPlayer > StarterPlayerScripts
+my discord: @|/、/-\   ||#9999
+
+game.Players.PlayerAdded:Connect(function(plr)
+
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+
+		Text = plr.Name .. " Has Joined The Game",
+
+		Color = Color3.fromRGB(133, 255, 33),
+		Font = Enum.Font.SourceSansBold,
+		TextSize = 18,
+	})
+end)
+
+game.Players.PlayerRemoving:Connect(function(plr)
+
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+
+		Text = plr.Name .. "Has Left The Game",
+
+		Color = Color3.fromRGB(255, 115, 0),
+		Font = Enum.Font.SourceSansBold,
+		TextSize = 18,
+	})
+end)
